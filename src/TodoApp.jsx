@@ -49,10 +49,10 @@ export const TodoApp = () => {
   }
 
  
-  
+  // bg-[#6e6161]
   
   return (
-    <div  className=" min-h-screen p-5 bg-[#6e6161]">
+    <div  className=" min-h-screen p-5 ">
 
       <div className=" flex justify-center items-center">
        <AddTodo onAdd={onAdd} />
