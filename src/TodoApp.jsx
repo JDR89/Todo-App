@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { AddTodo } from "./components/AddTodo";
 import ItemTodo from "./components/ItemTodo";
 
@@ -6,7 +6,11 @@ export const TodoApp = () => {
   const [arregloTodos, setArregloTodos] = useState([]);
   const [progress, setProgress] = useState(0);
   
-  
+ 
+
+  useEffect(() => {
+    onProgress();
+  }, [arregloTodos]);
 
   const onAdd = (todo) => {
     const newTodo = {
